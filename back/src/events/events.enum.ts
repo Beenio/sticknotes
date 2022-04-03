@@ -1,0 +1,9 @@
+export enum Events {
+    FETCH_NOTES = 'FETCH_NOTES',
+    NOTES_FETCHED = 'NOTES_FETCHED',
+    CREATE = 'CREATE',
+    DELETE = 'DELETE',
+    MOVE = 'MOVE',
+    UPDATE_VALUE = 'UPDATE_VALUE',
+    CARD_CREATED='CARD_CREATED'
+}
