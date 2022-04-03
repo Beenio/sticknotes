@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 import { Server } from "socket.io"
 import { Events } from "./events/events.enum";
 import { CreateNote } from "./useCases/create";
@@ -10,7 +12,7 @@ import { FetchNotes } from "./useCases/fetchNotes";
 import mongoose from 'mongoose'
 import { UpdateValue } from "./useCases/updateValue";
 
-const port = 4000
+const port = process.env.PORT
 const app = express()
 app.use(cors)
 
@@ -31,6 +33,6 @@ io.on("connection", (socket) => {
 });
 
 httpServer.listen(port, async () => {
-    await mongoose.connect('mongodb://test:test@localhost:27017/admin')
+    await mongoose.connect(String(process.env.MONGO))
     console.log(`Server running on port ${port}`)
 });

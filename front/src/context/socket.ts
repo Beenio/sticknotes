@@ -1,7 +1,7 @@
 import React from "react";
 import { connect} from "socket.io-client";
 
-export const socket = connect('http://localhost:4000');
+export const socket = connect(String(process.env.REACT_APP_URL));
 export const SocketContext = React.createContext(socket);
 
 socket.on("connect_error", (err) => {
