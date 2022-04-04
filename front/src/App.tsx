@@ -149,7 +149,15 @@ const App = () => {
           onClick={onClick}
         >
       </Fab>
-      <ToastContainer />
+      <ToastContainer
+        position="top-right"
+        autoClose={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+      />
     </div>
   );
 }
