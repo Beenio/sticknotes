@@ -4,9 +4,9 @@ export default class XProperty extends BaseProperty<number, number> {
     
     validade(input: number): InputValidation<number> {
         return {
-            isValid: true,
+            isValid: typeof input == 'number',
             input,
-            message: ``
+            message: `X should be a number`
         }
     }
 

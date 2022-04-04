@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1649039702548" clover="3.2.0">
+  <project timestamp="1649039702548" name="All files">
+    <metrics statements="142" coveredstatements="124" conditionals="21" coveredconditionals="10" methods="44" coveredmethods="36" elements="207" coveredelements="170" complexity="0" loc="142" ncloc="142" packages="12" files="18" classes="18"/>
+    <package name="domain.base">
+      <metrics statements="11" coveredstatements="11" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <file name="base.class.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/domain/base/base.class.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+      </file>
+      <file name="base.property.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/domain/base/base.property.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="16" count="52" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="52" type="stmt"/>
+        <line num="19" count="52" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="17" type="stmt"/>
+        <line num="23" count="35" type="stmt"/>
+        <line num="25" count="11" type="stmt"/>
+      </file>
+    </package>
+    <package name="domain.class.note">
+      <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="note.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/domain/class/note/note.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="18" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="9" type="stmt"/>
+        <line num="21" count="9" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="25" count="5" type="stmt"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="28" count="5" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="domain.class.note.properties">
+      <metrics statements="35" coveredstatements="35" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="15"/>
+      <file name="createdAt.property.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/domain/class/note/properties/createdAt.property.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="5" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+      </file>
+      <file name="id.property.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/domain/class/note/properties/id.property.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="10" count="12" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+      </file>
+      <file name="value.property.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/domain/class/note/properties/value.property.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+      </file>
+      <file name="x.property.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/domain/class/note/properties/x.property.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+      </file>
+      <file name="y.property.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/domain/class/note/properties/y.property.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="events">
+      <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="events.enum.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/events/events.enum.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.entities.note">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
+      <file name="note.entity.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/infra/entities/note/note.entity.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="18" count="5" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+    <package name="infra.exceptions">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="InvalidInput.exception.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/infra/exceptions/InvalidInput.exception.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="17" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="11" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.repositories.note">
+      <metrics statements="31" coveredstatements="13" conditionals="10" coveredconditionals="0" methods="10" coveredmethods="2"/>
+      <file name="note.mapper.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/infra/repositories/note/note.mapper.ts">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+      </file>
+      <file name="note.repository.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/infra/repositories/note/note.repository.ts">
+        <metrics statements="28" coveredstatements="11" conditionals="10" coveredconditionals="0" methods="9" coveredmethods="2"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="44" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="49" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="58" count="5" type="stmt"/>
+        <line num="59" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="63" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="70" count="5" type="stmt"/>
+        <line num="71" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="75" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="79" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="useCases.create">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/useCases/create/index.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="useCases.delete">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/useCases/delete/index.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="useCases.fetchNotes">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="index.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/useCases/fetchNotes/index.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="useCases.move">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/useCases/move/index.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="useCases.updateValue">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.ts" path="/Users/beirea/Documents/Projetos/sticknotes/back/src/useCases/updateValue/index.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

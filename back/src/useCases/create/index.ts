@@ -12,6 +12,7 @@ export const CreateNote = async (socket: Socket) => {
 
     const noteSaved = await repo.saveOne(note)
 
+    console.log('====== 1')
     socket.emit(Events.CARD_CREATED, {
         id: noteSaved.id.value,
         x: noteSaved.x.value,

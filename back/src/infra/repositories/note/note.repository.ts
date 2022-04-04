@@ -29,7 +29,7 @@ export class NoteRepository implements INoteRepository, IBaseRepository<Note> {
         })
     }
    
-    async saveOne(note: Note): Promise<Note> {
+    public async saveOne(note: Note): Promise<Note> {
         const saved =  await this.model.create({
             id: note.id.value,
             x: note.x.value,

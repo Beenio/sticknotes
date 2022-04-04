@@ -8,7 +8,7 @@ export default class ValueProperty extends BaseProperty<string, string> {
     
     validade(input: string): InputValidation<string> {
         return {
-            isValid: true,
+            isValid: typeof input == 'string',
             input,
             message: ``
         }
