@@ -6,11 +6,11 @@ import { useEffect, useReducer } from 'react';
 import { SocketContext, socket } from './context/socket';
 import Draggable from 'react-draggable';
 import MDEditor from '@uiw/react-md-editor';
-import { HeaderNote, StyledContent, StyledDragContainer } from './styled';
+import { FooterNote, HeaderNote, StyledContent, StyledDragContainer } from './styled';
 import { REDUCER_EVENTS, SOCKET_EVENTS } from './events/enum';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
-
+import { ToastContainer } from 'react-toastify';
 const initialState = {
   notes: []
 }
@@ -82,8 +82,8 @@ const App = () => {
   useEffect(() => {
     socket.emit(SOCKET_EVENTS.FETCH_NOTES)
     
-    socket.on(SOCKET_EVENTS.CARD_CREATED, ({id, value, x,  y}) => {
-      dispatch({type: REDUCER_EVENTS.ADD_NOTE, payload: { id, value, x, y }})
+    socket.on(SOCKET_EVENTS.CARD_CREATED, (note) => {
+      dispatch({type: REDUCER_EVENTS.ADD_NOTE, payload: note })
     })
 
     socket.on(SOCKET_EVENTS.NOTES_FETCHED, (notes) => {
@@ -116,7 +116,7 @@ const App = () => {
     <div className="App">
       <SocketContext.Provider value={socket}>
           <>
-            {notesState?.notes.map(({ id, value, x, y }: {id: string, value: string, x: number, y: number}) => 
+            {notesState?.notes.map(({ id, value, x, y, createdAt }: {id: string, value: string, x: number, y: number, createdAt: string}) => 
                   <Draggable
                     defaultPosition={{ x, y }}
                     position={{x, y}}
@@ -134,6 +134,10 @@ const App = () => {
                           preview="edit"
                           onChange={(value) => changeValue(id, value)}
                         />
+
+                        <FooterNote>
+                          <span>{new Date(createdAt).toUTCString()}</span>
+                        </FooterNote>
                       </StyledContent>
                   </Draggable>
             )}
@@ -145,6 +149,7 @@ const App = () => {
           onClick={onClick}
         >
       </Fab>
+      <ToastContainer />
     </div>
   );
 }

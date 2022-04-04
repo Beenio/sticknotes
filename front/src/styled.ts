@@ -19,6 +19,8 @@ const StyledContent = styled.div`
         background-color: #FEDE00;
         color: black;
         border-radius: 0px;
+        margin-left: 1px;
+        margin-right: -1px;
     }
 `
 
@@ -28,11 +30,21 @@ const HeaderNote = styled.div`
     border: 1px solid black;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    
 `
-
+const FooterNote = styled.div`
+    width: 100%;
+    height: 20px;
+    border: 1px solid black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #FEDE00;
+    span {
+        font-size: 10px;
+    }
+`
 export {
     StyledDragContainer,
     StyledContent,
-    HeaderNote
+    HeaderNote,
+    FooterNote
 }
