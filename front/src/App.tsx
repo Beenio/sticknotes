@@ -1,83 +1,17 @@
-import './App.css';
 import { Fab } from 'react-tiny-fab';
 import { FaPlus } from 'react-icons/fa';
 import 'react-tiny-fab/dist/styles.css';
 import { useEffect, useReducer } from 'react';
 import { SocketContext, socket } from './context/socket';
-import Draggable from 'react-draggable';
-import MDEditor from '@uiw/react-md-editor';
-import { FooterNote, HeaderNote, StyledContent, StyledDragContainer } from './styled';
-import { REDUCER_EVENTS, SOCKET_EVENTS } from './events/enum';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { ToastContainer } from 'react-toastify';
-const initialState = {
-  notes: []
-}
+import { REDUCER_EVENTS, SOCKET_EVENTS } from './events/enum';
+import { notesInitialState, notesReducer } from './reducers/note/note.reducer';
+import { INote } from './dtos/note.dto';
+import DraggableComp from './components/draggable';
 
-const notesReducer = (prevState: any, action: any) => {
-  switch(action.type) {
-    case REDUCER_EVENTS.SET_NOTES: {
-      const newState = {
-        notes: action.payload
-      }
 
-      return newState
-    }
-    case REDUCER_EVENTS.ADD_NOTE: {
-      const newState = {
-        notes: [...prevState.notes, action.payload]
-      }
-
-      return newState
-    }
-    case REDUCER_EVENTS.CHANGE_VALUE: {
-      const index = prevState.notes?.findIndex((item: any) => item.id === action.payload.id)
-
-      if(index<0) {
-        return prevState
-      }
-
-      const newState = {
-        notes: [...prevState.notes]
-      }
-
-      newState.notes[index].value = action.payload.value
-
-      return newState
-    }
-
-    case REDUCER_EVENTS.MOVE: {
-      const index = prevState.notes?.findIndex((item: any) => item.id === action.payload.id)
-
-      if(index<0) {
-        return prevState
-      }
-
-      const newState = {
-        notes: [...prevState.notes]
-      }
-
-      newState.notes[index].x = action.payload.x
-      newState.notes[index].y = action.payload.y
-
-      return newState
-    }
-
-    case REDUCER_EVENTS.REMOVE: {
-      const newNotes = prevState.notes?.filter((item: any) => item.id !== action.payload.id)
-
-      const newState = {
-        notes: [...newNotes]
-      }
-
-      return newState
-    }
-  }
-}
-
-const App = () => {
-  const [notesState, dispatch] = useReducer(notesReducer, initialState)
+const DraggableContainer = () => {
+  const [notesState, dispatch] = useReducer(notesReducer, notesInitialState)
 
   useEffect(() => {
     socket.emit(SOCKET_EVENTS.FETCH_NOTES)
@@ -92,8 +26,7 @@ const App = () => {
 
   }, [socket])
 
-  const onClick = (event: any) => {
-    event.preventDefault()
+  const onClick = () => {
     socket.emit(SOCKET_EVENTS.CREATE); 
   }
 
@@ -113,33 +46,20 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <>
       <SocketContext.Provider value={socket}>
           <>
-            {notesState?.notes.map(({ id, value, x, y, createdAt }: {id: string, value: string, x: number, y: number, createdAt: string}) => 
-                  <Draggable
-                    defaultPosition={{ x, y }}
-                    position={{x, y}}
-                    onStop={(_, data) => moveCard(id, data.x, data.y)}
-                  >
-                      <StyledContent>
-                        <HeaderNote>
-                          <FontAwesomeIcon icon={faTrash} onClick={() => removeCard(id) } />
-                        </HeaderNote>
-
-                        <MDEditor
-                          value={value}
-                          visiableDragbar={false}
-                          hideToolbar={true}
-                          preview="edit"
-                          onChange={(value) => changeValue(id, value)}
-                        />
-
-                        <FooterNote>
-                          <span>{new Date(createdAt).toUTCString()}</span>
-                        </FooterNote>
-                      </StyledContent>
-                  </Draggable>
+            {notesState?.notes.map(({ id, value, x, y, createdAt } : INote) => 
+                  <DraggableComp
+                    id={id}
+                    value={value}
+                    createdAt={createdAt}
+                    x={x}
+                    y={y}
+                    onChange={changeValue}
+                    onRemove={removeCard}
+                    onStop={moveCard}
+                  />
             )}
           </>
       </SocketContext.Provider>
@@ -158,8 +78,8 @@ const App = () => {
         pauseOnFocusLoss
         draggable
       />
-    </div>
+    </>
   );
 }
 
-export default App;
+export default DraggableContainer;

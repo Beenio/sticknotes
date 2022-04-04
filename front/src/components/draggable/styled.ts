@@ -1,13 +1,5 @@
 import styled from 'styled-components'
 
-const StyledDragContainer = styled.div`
-    max-width: 250px;
-    max-height: 400px;
-    width: 250px;
-    height: 400px;
-    position: absolute;
-`
-
 const StyledContent = styled.div`
     max-width: 250px;
     max-height: 400px;
@@ -25,6 +17,7 @@ const StyledContent = styled.div`
 `
 
 const HeaderNote = styled.div`
+    text-align: center;
     width: 100%;
     height: 20px;
     border: 1px solid black;
@@ -32,6 +25,7 @@ const HeaderNote = styled.div`
     border-top-right-radius: 5px;
 `
 const FooterNote = styled.div`
+    text-align: center;
     width: 100%;
     height: 20px;
     border: 1px solid black;
@@ -43,7 +37,6 @@ const FooterNote = styled.div`
     }
 `
 export {
-    StyledDragContainer,
     StyledContent,
     HeaderNote,
     FooterNote
