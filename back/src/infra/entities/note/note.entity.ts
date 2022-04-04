@@ -4,7 +4,8 @@ export interface INote extends Document {
     id: string,
     value: string,
     x: number,
-    y: number
+    y: number,
+    createdAt: Date
 }
 
 const schema = new Schema({

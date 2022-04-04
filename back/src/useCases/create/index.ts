@@ -8,7 +8,7 @@ import Note from "../../domain/class/note/note";
 export const CreateNote = async (socket: Socket) => {
     const id = uuid()
     const repo = new NoteRepository(noteModel)
-    const note = new Note(id, '', 50, 50)
+    const note = new Note(id, '', 50, 50, new Date())
 
     const noteSaved = await repo.saveOne(note)
 
@@ -17,5 +17,6 @@ export const CreateNote = async (socket: Socket) => {
         x: noteSaved.x.value,
         y: noteSaved.y.value,
         value: noteSaved.value.value,
+        createdAt: noteSaved.createdAt.value
     })
 }

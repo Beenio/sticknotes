@@ -10,6 +10,7 @@ export const FetchNotes = async (socket: Socket) => {
         id: note.id.value,
         value: note.value.value,
         x: note.x.value,
-        y: note.y.value
+        y: note.y.value,
+        createdAt: note.createdAt.value
     })))
 }
