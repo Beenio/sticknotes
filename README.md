@@ -10,7 +10,7 @@ With the connection in hands you have to edit the .env inside back folder and st
 
     - npm run start
 
-Go to the frontend and set the .env with your backend URL and start it:
+Go to the frontend and set the .env with your backend URL and start it: 
 
     - npm run start
     
